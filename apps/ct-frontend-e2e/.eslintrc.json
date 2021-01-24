@@ -1,0 +1,12 @@
+{
+  "extends": ["../ct-frontend/.eslintrc.json"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["apps/ct-frontend-e2e/tsconfig.*?.json"]
+      },
+      "rules": {}
+    }
+  ]
+}

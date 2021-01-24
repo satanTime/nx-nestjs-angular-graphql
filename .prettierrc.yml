@@ -1,0 +1,19 @@
+printWidth: 125
+tabWidth: 2
+useTabs: false
+semi: true
+singleQuote: true
+jsxSingleQuote: true
+trailingComma: 'all'
+bracketSpacing: false
+jsxBracketSameLine: false
+arrowParens: 'avoid'
+proseWrap: 'preserve'
+endOfLine: 'lf'
+overrides:
+  - files: '*.html'
+    options:
+      parser: 'html'
+  - files: '*.component.html'
+    options:
+      parser: 'angular'

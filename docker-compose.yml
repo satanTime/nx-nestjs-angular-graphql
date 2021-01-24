@@ -1,0 +1,64 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: apps/ct-frontend/docker.dev/Dockerfile
+    ports:
+      - 4200:4200
+    volumes:
+      - ./:/app
+      - /app/node_modules
+
+  backend:
+    build:
+      context: .
+      dockerfile: apps/ct-backend/docker.dev/Dockerfile
+    environment:
+      - TYPEORM_URL=mysql://user:password@database:3306/application
+      - TYPEORM_LOGGING=true
+      - TYPEORM_SYNCHRONIZE=true
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/app
+      - /app/node_modules
+
+  database:
+    image: mysql:5.7.33
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=application
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+    command:
+      - mysqld
+      - --character-set-server=utf8mb4
+      - --sql-mode=
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mounts/mysql:/var/lib/mysql
+    restart: always
+
+  storage:
+    image: satantime/minio-server:RELEASE.2021-01-16T02-19-44Z
+    environment:
+      - MINIO_ACCESS_KEY=123
+      - MINIO_SECRET_KEY=12345678
+    ports:
+      - 9000:9000
+    volumes:
+      - ./mounts/minio:/data
+    restart: always
+
+  smtp:
+    image: rnwood/smtp4dev:3.1.1.1
+    command: --smtpport 1025 --db /tmp/mails.db --messagestokeep 1000 --sessionstokeep 1000
+    ports:
+      - 1025:1025
+      - 81:80
+    volumes:
+      - ./mounts/smtp:/tmp/smtp
+    restart: always

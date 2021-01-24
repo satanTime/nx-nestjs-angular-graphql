@@ -1,0 +1,216 @@
+{
+  "version": 2,
+  "projects": {
+    "ct-frontend": {
+      "projectType": "application",
+      "root": "apps/ct-frontend",
+      "sourceRoot": "apps/ct-frontend/src",
+      "prefix": "da-control-tower",
+      "targets": {
+        "build": {
+          "executor": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/ct-frontend",
+            "index": "apps/ct-frontend/src/index.html",
+            "main": "apps/ct-frontend/src/main.ts",
+            "polyfills": "apps/ct-frontend/src/polyfills.ts",
+            "tsConfig": "apps/ct-frontend/tsconfig.app.json",
+            "aot": true,
+            "assets": ["apps/ct-frontend/src/favicon.ico", "apps/ct-frontend/src/assets"],
+            "styles": ["apps/ct-frontend/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/ct-frontend/src/environments/environment.ts",
+                  "with": "apps/ct-frontend/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "e2e": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/ct-frontend/src/environments/environment.ts",
+                  "with": "apps/ct-frontend/src/environments/environment.e2e.ts"
+                }
+              ],
+              "assets": ["apps/ct-frontend/src/e2e-api"]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ct-frontend:build",
+            "proxyConfig": "apps/ct-frontend/proxy.conf.json"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ct-frontend:build:production"
+            },
+            "e2e": {
+              "browserTarget": "ct-frontend:build:e2e",
+              "proxyConfig": "apps/ct-frontend/proxy-e2e.conf.js"
+            }
+          }
+        },
+        "extract-i18n": {
+          "executor": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ct-frontend:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/ct-frontend/src/**/*.ts", "apps/ct-frontend/src/**/*.html"]
+          }
+        },
+        "test": {
+          "executor": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/ct-frontend/src/test.ts",
+            "tsConfig": "apps/ct-frontend/tsconfig.spec.json",
+            "karmaConfig": "apps/ct-frontend/karma.conf.js",
+            "polyfills": "apps/ct-frontend/src/polyfills.ts",
+            "styles": [],
+            "scripts": [],
+            "assets": []
+          }
+        }
+      }
+    },
+    "ct-frontend-e2e": {
+      "root": "apps/ct-frontend-e2e",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/ct-frontend-e2e/protractor.conf.js",
+            "devServerTarget": "ct-frontend:serve:e2e",
+            "webdriverUpdate": false
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/ct-frontend-e2e/**/*.ts"]
+          }
+        }
+      }
+    },
+    "ct-backend": {
+      "root": "apps/ct-backend",
+      "sourceRoot": "apps/ct-backend/src",
+      "projectType": "application",
+      "prefix": "ct-backend",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/ct-backend",
+            "main": "apps/ct-backend/src/main.ts",
+            "tsConfig": "apps/ct-backend/tsconfig.app.json",
+            "assets": ["apps/ct-backend/src/assets", "apps/ct-backend/src/.env.default"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/ct-backend/src/environments/environment.ts",
+                  "with": "apps/ct-backend/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "ct-backend:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/ct-backend/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/ct-backend"],
+          "options": {
+            "jestConfig": "apps/ct-backend/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "ct-models": {
+      "root": "libs/ct-models",
+      "sourceRoot": "libs/ct-models/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/ct-models/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ct-models"],
+          "options": {
+            "jestConfig": "libs/ct-models/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular",
+    "packageManager": "npm"
+  },
+  "generators": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "karma",
+      "e2eTestRunner": "protractor",
+      "linter": "eslint",
+      "strict": true
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "karma",
+      "linter": "eslint",
+      "strict": true
+    },
+    "@nrwl/angular:component": {}
+  },
+  "defaultProject": "ct-frontend"
+}
