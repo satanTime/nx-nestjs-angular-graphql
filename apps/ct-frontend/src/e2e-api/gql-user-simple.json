@@ -1,0 +1,22 @@
+{
+  "data": {
+    "user": {
+      "companyId": "1",
+      "id": "1",
+      "firstName": "E2E",
+      "lastName": "Test",
+      "company": {
+        "addressId": "1",
+        "id": "1",
+        "name": "E2E Test",
+        "staff": [],
+        "address": {
+          "id": "1",
+          "street": "E",
+          "city": "2",
+          "country": "E"
+        }
+      }
+    }
+  }
+}

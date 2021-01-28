@@ -16,7 +16,7 @@ export class UserResolver {
     })
     id: string,
   ): Promise<UserEntity> {
-    return this.userRepo.findOneOrFail(id);
+    return this.userRepo.findOne(id);
   }
 
   @Query(() => [UserEntity])
@@ -29,7 +29,7 @@ export class UserResolver {
     if (!user.managerId) {
       return null;
     }
-    return this.userRepo.findOneOrFail(user.managerId);
+    return this.userRepo.findOne(user.managerId);
   }
 
   @ResolveField()
@@ -37,7 +37,7 @@ export class UserResolver {
     if (!user.companyId) {
       return null;
     }
-    return this.companyRepo.findOneOrFail(user.companyId);
+    return this.companyRepo.findOne(user.companyId);
   }
 
   @ResolveField()

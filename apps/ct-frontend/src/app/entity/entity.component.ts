@@ -3,7 +3,7 @@ import {User} from '@da-control-tower/ct-models/User';
 import {select, Store} from '@ngrx/store';
 import {rootEntities} from 'ngrx-entity-relationship';
 import {Observable} from 'rxjs';
-import {LoadUsers} from './store/actions';
+import {LoadUser} from './store/actions';
 import {State} from './store/reducers';
 import {
   relAddressCompany,
@@ -21,6 +21,8 @@ import {
 })
 export class EntityComponent implements OnInit, OnDestroy {
   public readonly user$: Observable<User | undefined>;
+
+  private userId = '1';
 
   // prettier-ignore
   private readonly user = rootUser(
@@ -51,12 +53,13 @@ export class EntityComponent implements OnInit, OnDestroy {
   // );
 
   constructor(protected readonly store: Store<State>) {
-    this.user$ = this.store.pipe(select(this.user, '1'));
+    this.user$ = this.store.pipe(select(this.user, this.userId));
   }
 
   public ngOnInit(): void {
     this.store.dispatch(
-      new LoadUsers({
+      new LoadUser({
+        id: this.userId,
         selector: this.user,
       }),
     );

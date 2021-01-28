@@ -2,13 +2,18 @@ import {Action} from '@ngrx/store';
 import {ENTITY_SELECTOR} from 'ngrx-entity-relationship';
 
 export enum UserActionTypes {
-  LOAD = '[User] Load Users',
+  LOAD = '[User] Load User',
 }
 
-export class LoadUsers implements Action {
+export class LoadUser implements Action {
   readonly type = UserActionTypes.LOAD;
 
-  constructor(public payload: {selector: ENTITY_SELECTOR}) {}
+  constructor(
+    public payload: {
+      id: string;
+      selector: ENTITY_SELECTOR;
+    },
+  ) {}
 }
 
-export type UserActionsUnion = LoadUsers;
+export type UserActionsUnion = LoadUser;

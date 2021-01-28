@@ -5,17 +5,18 @@ import {Apollo, gql} from 'apollo-angular';
 import {reduceGraph} from 'ngrx-entity-relationship';
 import {toGraphQL} from 'ngrx-entity-relationship/graphql';
 import {map, switchMap, tap} from 'rxjs/operators';
-import {LoadUsers, UserActionTypes} from './actions';
+import {LoadUser, UserActionTypes} from './actions';
 
 @Injectable()
 export class EntityEffects {
   public readonly dataGraph$ = createEffect(() =>
     this.actions$.pipe(
       ofType(UserActionTypes.LOAD),
-      switchMap((action: LoadUsers) => {
-        const query = toGraphQL('users', action.payload.selector);
+      switchMap((action: LoadUser) => {
+        const query = toGraphQL('user', {id: action.payload.id}, action.payload.selector);
+        console.log(query);
         return this.apollo
-          .watchQuery<{users: Array<User>}>({
+          .watchQuery<{user: User | null}>({
             query: gql`
               ${query}
             `,
@@ -24,7 +25,7 @@ export class EntityEffects {
             tap(console.log),
             map(response =>
               reduceGraph({
-                data: response.data.users,
+                data: response.data.user,
                 selector: action.payload.selector,
               }),
             ),

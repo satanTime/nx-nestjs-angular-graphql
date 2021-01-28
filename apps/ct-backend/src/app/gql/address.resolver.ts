@@ -16,7 +16,7 @@ export class AddressResolver {
     })
     id: string,
   ): Promise<AddressEntity> {
-    return this.addressRepo.findOneOrFail(id);
+    return this.addressRepo.findOne(id);
   }
 
   @Query(() => [AddressEntity])

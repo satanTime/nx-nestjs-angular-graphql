@@ -21,7 +21,7 @@ export class CompanyResolver {
     })
     id: string,
   ): Promise<CompanyEntity> {
-    return this.companyRepo.findOneOrFail(id);
+    return this.companyRepo.findOne(id);
   }
 
   @Query(() => [CompanyEntity])
