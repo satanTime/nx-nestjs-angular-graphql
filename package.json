@@ -65,9 +65,9 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.1102.0",
-    "@angular-eslint/eslint-plugin": "1.1.0",
-    "@angular-eslint/eslint-plugin-template": "1.1.0",
-    "@angular-eslint/template-parser": "1.1.0",
+    "@angular-eslint/eslint-plugin": "1.2.0",
+    "@angular-eslint/eslint-plugin-template": "1.2.0",
+    "@angular-eslint/template-parser": "1.2.0",
     "@angular/compiler-cli": "11.1.2",
     "@angular/language-service": "11.1.2",
     "@nestjs/schematics": "7.2.7",
