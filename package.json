@@ -25,7 +25,8 @@
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "postinstall": "npm run postinstall:ngcc && npm run postinstall:puppeteer && npm run postinstall:webdriver",
+    "postinstall": "npm run postinstall:ngcc && npm run postinstall:puppeteer && npm run postinstall:webdriver && postinstall:husky",
+    "postinstall:husky": "husky install",
     "postinstall:ngcc": "ngcc",
     "postinstall:ngcc:nx": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "postinstall:puppeteer": "node ./node_modules/puppeteer/install.js",
@@ -114,10 +115,5 @@
     "ts-node": "9.1.1",
     "tslint": "6.1.3",
     "typescript": "4.1.5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }
