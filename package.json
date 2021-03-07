@@ -25,7 +25,7 @@
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "postinstall": "npm run postinstall:ngcc && npm run postinstall:puppeteer && npm run postinstall:webdriver && postinstall:husky",
+    "postinstall": "npm run postinstall:ngcc && npm run postinstall:puppeteer && npm run postinstall:webdriver && npm run postinstall:husky",
     "postinstall:husky": "husky install",
     "postinstall:ngcc": "ngcc",
     "postinstall:ngcc:nx": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
