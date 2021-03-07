@@ -54,7 +54,7 @@ services:
     restart: always
 
   smtp:
-    image: rnwood/smtp4dev:3.1.1.1
+    image: rnwood/smtp4dev:3.1.1.2
     command: --smtpport 1025 --db /tmp/mails.db --messagestokeep 1000 --sessionstokeep 1000
     ports:
       - 1025:1025
