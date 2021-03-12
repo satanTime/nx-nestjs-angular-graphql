@@ -71,7 +71,7 @@
     "@angular-eslint/template-parser": "1.2.0",
     "@angular/compiler-cli": "11.2.5",
     "@angular/language-service": "11.2.5",
-    "@nestjs/schematics": "7.2.9",
+    "@nestjs/schematics": "7.3.0",
     "@nestjs/testing": "7.6.14",
     "@nrwl/angular": "11.4.0",
     "@nrwl/cli": "11.4.0",
