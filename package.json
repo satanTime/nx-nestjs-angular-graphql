@@ -59,7 +59,7 @@
     "mysql2": "2.2.5",
     "ngrx-entity-relationship": "1.5.0",
     "reflect-metadata": "0.1.13",
-    "rxjs": "6.6.6",
+    "rxjs": "6.6.7",
     "tslib": "2.1.0",
     "typeorm": "0.2.31",
     "zone.js": "0.11.4"
