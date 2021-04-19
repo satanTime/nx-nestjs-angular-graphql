@@ -57,7 +57,7 @@
     "graphql-tools": "7.0.4",
     "helmet": "4.5.0",
     "mysql2": "2.2.5",
-    "ngrx-entity-relationship": "1.5.0",
+    "ngrx-entity-relationship": "1.5.1",
     "reflect-metadata": "0.1.13",
     "rxjs": "6.6.7",
     "tslib": "2.2.0",
