@@ -30,7 +30,7 @@
     "postinstall:ngcc": "ngcc",
     "postinstall:ngcc:nx": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "postinstall:puppeteer": "node ./node_modules/puppeteer/install.js",
-    "postinstall:webdriver": "webdriver-manager update --versions.chrome 88.0.4324.27 --gecko false"
+    "postinstall:webdriver": "webdriver-manager update --versions.chrome 90.0.4430.24 --gecko false"
   },
   "private": true,
   "dependencies": {
@@ -110,7 +110,7 @@
     "ng-mocks": "11.10.1",
     "prettier": "2.2.1",
     "protractor": "7.0.0",
-    "puppeteer": "6.0.0",
+    "puppeteer": "8.0.0",
     "ts-jest": "26.5.5",
     "ts-node": "9.1.1",
     "tslint": "6.1.3",
