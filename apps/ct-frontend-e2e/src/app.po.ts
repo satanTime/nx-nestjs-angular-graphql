@@ -2,7 +2,7 @@ import {User} from '@da-control-tower/ct-models/User';
 import {browser, by, element} from 'protractor';
 
 export class AppPage {
-  async navigateTo(spec: string = ''): Promise<unknown> {
+  async navigateTo(spec = ''): Promise<unknown> {
     return browser.get(browser.baseUrl + '?e2e-spec=' + spec);
   }
 
