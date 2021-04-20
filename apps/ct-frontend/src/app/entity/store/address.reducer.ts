@@ -1,11 +1,13 @@
 import {Address} from '@da-control-tower/ct-models/Address';
 import {createEntityAdapter, EntityAdapter, EntityState} from '@ngrx/entity';
+import {Action, createReducer} from '@ngrx/store';
 
-export type State = EntityState<Address>;
+export type AddressState = EntityState<Address>;
 
-export const adapter: EntityAdapter<Address> = createEntityAdapter<Address>();
-export const initialState: State = adapter.getInitialState();
+export const addressAdapter: EntityAdapter<Address> = createEntityAdapter<Address>();
 
-export function reducer(state: State = initialState) {
-  return state;
+const reducer = createReducer(addressAdapter.getInitialState());
+
+export function addressReducer(state: AddressState, action: Action) {
+  return reducer(state, action);
 }

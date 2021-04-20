@@ -3,7 +3,7 @@ import {User} from '@da-control-tower/ct-models/User';
 import {select, Store} from '@ngrx/store';
 import {rootEntities} from 'ngrx-entity-relationship';
 import {Observable} from 'rxjs';
-import {LoadUser} from './store/actions';
+import {loadUser} from './store/actions';
 import {State} from './store/reducers';
 import {
   relAddressCompany,
@@ -58,7 +58,7 @@ export class EntityComponent implements OnInit, OnDestroy {
 
   public ngOnInit(): void {
     this.store.dispatch(
-      new LoadUser({
+      loadUser({
         id: this.userId,
         selector: this.user,
       }),
