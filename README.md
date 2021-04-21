@@ -19,7 +19,7 @@ To run the application, please ensure that you have [docker](https://www.docker.
 
 1. Wait a bit until [backend](./apps/ct-backend) and [frontend](./apps/ct-frontend) have been successfully compiled
 
-1. Open [http://localhost:4200](http://localhost:4200) in a browser
+1. Open [http://localhost](http://localhost) in a browser
 
 1. Profit
 

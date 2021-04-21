@@ -1,8 +1,8 @@
 export const environment = {
   production: false,
-  urlApp: 'http://localhost:4200',
-  urlApi: 'http://localhost:3000/api',
-  urlApiGql: 'http://localhost:3000/api/gql',
+  urlApp: 'http://localhost',
+  urlApi: 'http://localhost/api',
+  urlApiGql: 'http://localhost/api/gql',
 };
 
 import 'zone.js/dist/zone-error'; // Included with Angular CLI.

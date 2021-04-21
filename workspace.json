@@ -153,7 +153,10 @@
         "serve": {
           "executor": "@nrwl/node:execute",
           "options": {
-            "buildTarget": "ct-backend:build"
+            "buildTarget": "ct-backend:build",
+            "inspect": true,
+            "host": "0.0.0.0",
+            "port": 40001
           }
         },
         "lint": {
