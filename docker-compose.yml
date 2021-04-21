@@ -41,7 +41,7 @@ services:
       - --character-set-server=utf8mb4
       - --sql-mode=
     ports:
-      - 3306:3306
+      - 127.0.0.1:3306:3306
     volumes:
       - ./mounts/mysql:/var/lib/mysql
     restart: always
@@ -59,10 +59,15 @@ services:
 
   smtp:
     image: rnwood/smtp4dev:3.1.1.2
-    command: --smtpport 1025 --db /tmp/mails.db --messagestokeep 1000 --sessionstokeep 1000
-    ports:
-      - 1025:1025
-      - 81:80
+    command:
+      - --smtpport
+      - '1025'
+      - --db
+      - /tmp/smtp/mails.db
+      - --messagestokeep
+      - '1000'
+      - --sessionstokeep
+      - '1000'
     volumes:
       - ./mounts/smtp:/tmp/smtp
     restart: always
