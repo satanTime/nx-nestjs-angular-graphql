@@ -1,10 +1,11 @@
 import {Injectable} from '@angular/core';
-import {User} from '@da-control-tower/ct-models/User';
+import {User} from '@control-tower/ct-models/User';
 import {Actions, createEffect, ofType} from '@ngrx/effects';
 import {Apollo, gql} from 'apollo-angular';
 import {reduceGraph} from 'ngrx-entity-relationship';
 import {toGraphQL} from 'ngrx-entity-relationship/graphql';
 import {map, switchMap, tap} from 'rxjs/operators';
+
 import {loadUser} from './actions';
 
 @Injectable()

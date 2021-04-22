@@ -1,0 +1,33 @@
+{
+  "realm": "nx-application",
+  "users": [
+    {
+      "id": "28864641-2458-4ab9-a470-25b2043f0fbd",
+      "createdTimestamp": 1619015609845,
+      "username": "user",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "user@nx-application.lo",
+      "credentials": [
+        {
+          "id": "36b34cee-e34b-47fa-8db5-9d7c258dfc25",
+          "type": "password",
+          "createdDate": 1619018297674,
+          "secretData": "{\"value\":\"wGOb7+nCIq6j+gcZMbP1iTeDgXj1HlS+AFHbKZekP12CCfqv2IDx7rFl/KI6uQD9YjMajIHLa1sbu3ZooEQOcA==\",\"salt\":\"p3Gm5QDbfr7sYoW2u9M9yg==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": ["offline_access", "uma_authorization"],
+      "clientRoles": {
+        "account": ["manage-account", "view-profile"]
+      },
+      "notBefore": 0,
+      "groups": []
+    }
+  ]
+}

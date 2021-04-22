@@ -1,4 +1,5 @@
 import {Args, ID, Parent, Query, ResolveField, Resolver} from '@nestjs/graphql';
+
 import {CompanyRepo} from '../database/company.repo';
 import {UserRepo} from '../database/user.repo';
 import {UserEntity} from '../entities/user.entity';

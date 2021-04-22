@@ -3,4 +3,7 @@ export const environment = {
   urlApp: 'http://localhost:4200',
   urlApi: '/api',
   urlApiGql: '/api/gql',
+  ssoUrl: '/auth',
+  ssoRealm: 'nx-application',
+  ssoClientId: 'ct-frontend',
 };

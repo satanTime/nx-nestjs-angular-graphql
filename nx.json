@@ -1,5 +1,5 @@
 {
-  "npmScope": "da-control-tower",
+  "npmScope": "control-tower",
   "affected": {"defaultBase": "master"},
   "implicitDependencies": {
     "workspace.json": "*",

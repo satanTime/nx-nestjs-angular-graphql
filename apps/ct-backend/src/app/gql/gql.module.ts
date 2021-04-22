@@ -1,7 +1,10 @@
+import {join} from 'path';
+
 import {Module} from '@nestjs/common';
 import {GraphQLModule} from '@nestjs/graphql';
-import {join} from 'path';
+
 import {DatabaseModule} from '../database/database.module';
+
 import {AddressResolver} from './address.resolver';
 import {CompanyResolver} from './company.resolver';
 import {UserResolver} from './user.resolver';

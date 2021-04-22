@@ -1,4 +1,4 @@
-import {User} from '@da-control-tower/ct-models/User';
+import {User} from '@control-tower/ct-models/User';
 import {browser, by, element} from 'protractor';
 
 export class AppPage {
@@ -7,7 +7,7 @@ export class AppPage {
   }
 
   async getTitleText(): Promise<string> {
-    return element(by.css('da-control-tower-root h1')).getText();
+    return element(by.css('app-root h1')).getText();
   }
 
   async getUser$(): Promise<User> {

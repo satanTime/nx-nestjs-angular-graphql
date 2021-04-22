@@ -54,6 +54,17 @@ To run the application, please ensure that you have [docker](https://www.docker.
 - E2E tests via [Protractor](https://www.protractortest.org/) with [CircleCI](https://circleci.com) and [Puppeteer](https://pptr.dev)
 - [ng-mocks](https://ng-mocks.sudo.eu) to mock dependencies in tests
 
+## SSO
+
+[Keycloak](https://https://www.keycloak.org) is backed with:
+
+- An app user with a username `user` and a password `user`
+- A master user with a username `admin` and a password `admin` on [http://localhost/auth/admin](http://localhost/auth/admin)
+
+## Email Catcher
+
+[smtp4dev](https://github.com/rnwood/smtp4dev#readme) which can be accessed on [http://localhost/tools/emails/](http://localhost/tools/emails/)
+
 ## CircleCi
 
 [CircleCI](https://circleci.com) is backed with:
