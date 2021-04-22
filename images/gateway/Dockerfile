@@ -1,3 +1,3 @@
-FROM nginx:1.18.0
+FROM nginx:1.20.0
 
 COPY . /
