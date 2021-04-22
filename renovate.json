@@ -20,7 +20,7 @@
     {
       "matchDatasources": ["docker"],
       "packagePatterns": ["rnwood/smtp4dev"],
-      "allowedVersions": "/^\\d+(\\.\\d+){3,4}$/"
+      "allowedVersions": "/^\\d+(\\.\\d+){2,3}$/"
     },
     {
       "matchDatasources": ["docker"],
