@@ -1,9 +1,11 @@
 import {Module} from '@nestjs/common';
 import {TypeOrmModule} from '@nestjs/typeorm';
 import {Connection} from 'typeorm';
+
 import {AddressEntity} from '../entities/address.entity';
 import {CompanyEntity} from '../entities/company.entity';
 import {UserEntity} from '../entities/user.entity';
+
 import {AddressRepo} from './address.repo';
 import {CompanyRepo} from './company.repo';
 import {UserRepo} from './user.repo';

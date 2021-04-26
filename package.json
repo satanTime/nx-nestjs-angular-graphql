@@ -1,5 +1,5 @@
 {
-  "name": "da-control-tower",
+  "name": "nx-nestjs-angular-graphql",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -56,6 +56,8 @@
     "graphql": "15.5.0",
     "graphql-tools": "7.0.4",
     "helmet": "4.5.0",
+    "keycloak-angular": "8.1.0",
+    "keycloak-js": "12.0.4",
     "mysql2": "2.2.5",
     "ngrx-entity-relationship": "1.5.1",
     "reflect-metadata": "0.1.13",

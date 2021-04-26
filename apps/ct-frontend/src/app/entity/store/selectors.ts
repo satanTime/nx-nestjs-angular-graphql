@@ -4,6 +4,7 @@ import {
   relatedEntitySelector,
   rootEntitySelector,
 } from 'ngrx-entity-relationship';
+
 import {selectAddressState, selectCompanyState, selectUserState} from './reducers';
 
 const gqlFieldsUser = {gqlFields: ['id', 'firstName', 'lastName']};

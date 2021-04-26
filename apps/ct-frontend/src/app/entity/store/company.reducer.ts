@@ -1,4 +1,4 @@
-import {Company} from '@da-control-tower/ct-models/Company';
+import {Company} from '@control-tower/ct-models/Company';
 import {createEntityAdapter, EntityAdapter, EntityState} from '@ngrx/entity';
 import {Action, createReducer} from '@ngrx/store';
 

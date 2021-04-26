@@ -5,7 +5,7 @@
       "projectType": "application",
       "root": "apps/ct-frontend",
       "sourceRoot": "apps/ct-frontend/src",
-      "prefix": "da-control-tower",
+      "prefix": "control-tower",
       "targets": {
         "build": {
           "executor": "@angular-devkit/build-angular:browser",
@@ -55,7 +55,12 @@
                   "with": "apps/ct-frontend/src/environments/environment.e2e.ts"
                 }
               ],
-              "assets": ["apps/ct-frontend/src/e2e-api"]
+              "assets": [
+                "apps/ct-frontend/src/favicon.ico",
+                "apps/ct-frontend/src/assets",
+                "apps/ct-frontend/src/e2e-api",
+                "apps/ct-frontend/src/e2e-auth"
+              ]
             }
           }
         },

@@ -1,4 +1,4 @@
-import {Address} from '@da-control-tower/ct-models/Address';
+import {Address} from '@control-tower/ct-models/Address';
 import {createEntityAdapter, EntityAdapter, EntityState} from '@ngrx/entity';
 import {Action, createReducer} from '@ngrx/store';
 

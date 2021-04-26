@@ -1,6 +1,7 @@
-import {User} from '@da-control-tower/ct-models/User';
+import {User} from '@control-tower/ct-models/User';
 import {Field, ID, ObjectType} from '@nestjs/graphql';
 import {Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, RelationId} from 'typeorm';
+
 import {CompanyEntity} from './company.entity';
 
 @Entity({

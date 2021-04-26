@@ -3,10 +3,11 @@
  * This is only a minimal backend to get started.
  */
 
+import {join} from 'path';
+
 import {Logger} from '@nestjs/common';
 import {NestFactory} from '@nestjs/core';
 import {config} from 'dotenv';
-import {join} from 'path';
 import * as helmet from 'helmet';
 
 import {AppModule} from './app/app.module';

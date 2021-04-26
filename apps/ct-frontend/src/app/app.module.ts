@@ -1,15 +1,18 @@
-import {HttpClientModule} from '@angular/common/http';
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {RouterModule} from '@angular/router';
-import {InMemoryCache} from '@apollo/client/cache';
-import {EffectsModule} from '@ngrx/effects';
-import {StoreModule} from '@ngrx/store';
 import {APOLLO_OPTIONS} from 'apollo-angular';
+import {BrowserModule} from '@angular/platform-browser';
+import {EffectsModule} from '@ngrx/effects';
+import {HttpClientModule} from '@angular/common/http';
 import {HttpLink} from 'apollo-angular/http';
+import {InMemoryCache} from '@apollo/client/cache';
+import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
+import {StoreModule} from '@ngrx/store';
 import {ngrxEntityRelationshipReducer} from 'ngrx-entity-relationship';
+
 import {URL_API_GQL} from '../core/URL_API_GQL';
+
 import {AppComponent} from './app.component';
+import {AuthModule} from './auth/auth.module';
 import {EntityModule} from './entity/entity.module';
 
 @NgModule({
@@ -17,6 +20,7 @@ import {EntityModule} from './entity/entity.module';
   imports: [
     HttpClientModule,
     BrowserModule,
+    AuthModule,
     RouterModule.forRoot([], {initialNavigation: 'enabled'}),
     EntityModule,
     EffectsModule.forRoot([]),

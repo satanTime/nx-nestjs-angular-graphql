@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      function receiveMessage(event) {
+        if (typeof event.data === 'string') {
+          // changed, unchanged, error
+          event.source.postMessage('unchanged', event.origin);
+        }
+      }
+      window.addEventListener('message', receiveMessage, false);
+    </script>
+  </body>
+</html>

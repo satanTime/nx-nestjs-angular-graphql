@@ -1,7 +1,7 @@
 {
   "extends": ["eslint:recommended", "plugin:prettier/recommended"],
   "root": true,
-  "plugins": ["@nrwl/nx"],
+  "plugins": ["@nrwl/nx", "import"],
   "rules": {
     "semi": ["error", "always"],
     "quotes": ["error", "single"]
@@ -16,6 +16,21 @@
             "enforceBuildableLibDependency": true,
             "allow": [],
             "depConstraints": [{"sourceTag": "*", "onlyDependOnLibsWithTags": ["*"]}]
+          }
+        ],
+        "sort-imports": [
+          "error",
+          {
+            "ignoreCase": true,
+            "ignoreDeclarationSort": true,
+            "allowSeparatedGroups": true
+          }
+        ],
+        "import/order": [
+          "error",
+          {
+            "newlines-between": "always",
+            "groups": ["builtin", "external", "internal", "index", "parent", "sibling"]
           }
         ]
       }

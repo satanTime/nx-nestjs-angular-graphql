@@ -1,2 +1,9 @@
-<h1>{{ appService.greeting | async }}</h1>
-<app-entity></app-entity>
+<ng-container *ngIf="view$ | async as view">
+  <h1>{{ view.greeting }}</h1>
+  <div *ngIf="view.isLoggedIn">
+    You are logged in. <button (click)="authService.ks.logout()">Logout</button>
+    <pre>{{ view.profile | json }}</pre>
+  </div>
+  <div *ngIf="!view.isLoggedIn">You are not logged in. <button (click)="authService.ks.login()">Login</button></div>
+  <app-entity></app-entity>
+</ng-container>
