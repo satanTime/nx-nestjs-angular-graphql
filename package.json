@@ -54,7 +54,7 @@
     "apollo-angular": "2.4.0",
     "apollo-server-express": "2.24.0",
     "graphql": "15.5.0",
-    "graphql-tools": "7.0.4",
+    "graphql-tools": "7.0.5",
     "helmet": "4.6.0",
     "keycloak-angular": "8.1.0",
     "keycloak-js": "13.0.0",
