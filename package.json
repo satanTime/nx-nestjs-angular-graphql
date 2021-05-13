@@ -42,7 +42,7 @@
     "@angular/platform-browser": "11.2.13",
     "@angular/platform-browser-dynamic": "11.2.13",
     "@angular/router": "11.2.13",
-    "@apollo/client": "3.3.17",
+    "@apollo/client": "3.3.18",
     "@nestjs/common": "7.6.15",
     "@nestjs/core": "7.6.15",
     "@nestjs/graphql": "7.10.6",
