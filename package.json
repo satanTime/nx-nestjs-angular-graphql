@@ -56,7 +56,7 @@
     "graphql": "15.5.0",
     "graphql-tools": "7.0.5",
     "helmet": "4.6.0",
-    "keycloak-angular": "8.1.0",
+    "keycloak-angular": "8.2.0",
     "keycloak-js": "13.0.0",
     "mysql2": "2.2.5",
     "ngrx-entity-relationship": "1.5.1",
