@@ -9,7 +9,7 @@ services:
       - ./images/gateway/etc/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf:ro
 
   keycloak:
-    image: jboss/keycloak:11.0.3
+    image: jboss/keycloak:13.0.1
     environment:
       - KEYCLOAK_USER=admin
       - KEYCLOAK_PASSWORD=admin
