@@ -62,7 +62,7 @@
     "ngrx-entity-relationship": "1.6.0",
     "reflect-metadata": "0.1.13",
     "rxjs": "6.6.7",
-    "tslib": "2.2.0",
+    "tslib": "2.3.0",
     "typeorm": "0.2.34",
     "zone.js": "0.11.4"
   },
