@@ -8,7 +8,7 @@ parameters:
 jobs:
   Install:
     docker:
-      - image: satantime/puppeteer-node:16.4.2-buster
+      - image: satantime/puppeteer-node:16.5.0-buster
     resource_class: small
     steps:
       - checkout
@@ -27,7 +27,7 @@ jobs:
             - ./node_modules
   CT Frontend:
     docker:
-      - image: satantime/puppeteer-node:16.4.2-buster
+      - image: satantime/puppeteer-node:16.5.0-buster
     resource_class: small
     steps:
       - checkout
@@ -85,7 +85,7 @@ jobs:
       IE_BIN: 'C:\Program Files\Internet Explorer\iexplore.exe'
   CT Frontend E2E:
     docker:
-      - image: satantime/puppeteer-node:16.4.2-buster
+      - image: satantime/puppeteer-node:16.5.0-buster
     resource_class: small
     steps:
       - checkout
@@ -104,7 +104,7 @@ jobs:
           destination: ct-frontend-e2e
   CT Backend:
     docker:
-      - image: satantime/puppeteer-node:16.4.2-buster
+      - image: satantime/puppeteer-node:16.5.0-buster
     resource_class: small
     steps:
       - checkout
