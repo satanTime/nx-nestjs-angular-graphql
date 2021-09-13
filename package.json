@@ -110,7 +110,7 @@
     "karma-jasmine-html-reporter": "1.7.0",
     "karma-junit-reporter": "2.0.1",
     "lint-staged": "11.1.2",
-    "ng-mocks": "12.4.0",
+    "ng-mocks": "12.5.0",
     "prettier": "2.4.0",
     "protractor": "7.0.0",
     "puppeteer": "9.1.1",
