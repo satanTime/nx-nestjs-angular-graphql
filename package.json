@@ -45,7 +45,7 @@
     "@apollo/client": "3.4.15",
     "@nestjs/common": "8.0.8",
     "@nestjs/core": "8.0.8",
-    "@nestjs/graphql": "9.0.4",
+    "@nestjs/graphql": "9.0.5",
     "@nestjs/platform-express": "8.0.8",
     "@nestjs/typeorm": "8.0.2",
     "@ngrx/effects": "12.4.0",
