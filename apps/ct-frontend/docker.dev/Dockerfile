@@ -1,4 +1,4 @@
-FROM node:14.17.6-buster
+FROM node:14.18.0-buster
 
 EXPOSE 4200
 
