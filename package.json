@@ -52,7 +52,7 @@
     "@ngrx/entity": "12.5.0",
     "@ngrx/store": "12.5.0",
     "apollo-angular": "2.6.0",
-    "apollo-server-express": "3.3.0",
+    "apollo-server-express": "3.4.0",
     "graphql": "15.6.0",
     "graphql-tools": "8.2.0",
     "helmet": "4.6.0",
