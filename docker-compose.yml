@@ -67,7 +67,7 @@ services:
     restart: always
 
   storage:
-    image: satantime/minio-server:RELEASE.2022-01-28T02-28-16Z
+    image: satantime/minio-server:RELEASE.2022-02-01T18-00-14Z
     environment:
       - MINIO_ACCESS_KEY=123
       - MINIO_SECRET_KEY=12345678
