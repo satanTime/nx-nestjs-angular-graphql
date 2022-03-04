@@ -63,7 +63,7 @@
     "reflect-metadata": "0.1.13",
     "rxjs": "6.6.7",
     "tslib": "2.3.1",
-    "typeorm": "0.2.44",
+    "typeorm": "0.2.45",
     "zone.js": "0.11.5"
   },
   "devDependencies": {
