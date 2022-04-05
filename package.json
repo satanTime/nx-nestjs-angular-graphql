@@ -51,7 +51,7 @@
     "@ngrx/effects": "13.1.0",
     "@ngrx/entity": "13.1.0",
     "@ngrx/store": "13.1.0",
-    "apollo-angular": "3.0.0",
+    "apollo-angular": "3.0.1",
     "apollo-server-express": "3.6.7",
     "graphql": "16.3.0",
     "graphql-tools": "8.2.4",
