@@ -18,7 +18,7 @@ jobs:
           name: NPM Install
           command: |
             if [ ! -d "./node_modules/" ]; then
-              npm ci --no-optional --ignore-scripts && \
+              npm ci --ignore-scripts && \
               npm run postinstall
             fi
       - save_cache:
@@ -65,7 +65,7 @@ jobs:
           name: NPM Install
           command: |
             if ((Test-Path "node_modules") -ne "True") {
-              npm ci --no-optional --ignore-scripts
+              npm ci --ignore-scripts && \
               npm run postinstall
             }
       - save_cache:
