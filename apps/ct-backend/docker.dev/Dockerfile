@@ -1,4 +1,4 @@
-FROM node:14.19.3-buster
+FROM node:19.9.0-buster
 
 EXPOSE 3000
 
