@@ -98,7 +98,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "husky": "7.0.4",
     "jasmine-core": "4.1.0",
-    "jasmine-reporters": "2.5.0",
+    "jasmine-reporters": "2.5.2",
     "jasmine-spec-reporter": "7.0.0",
     "jest": "28.0.3",
     "jest-junit": "13.2.0",
