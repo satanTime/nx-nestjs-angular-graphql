@@ -60,7 +60,7 @@
     "keycloak-js": "17.0.1",
     "mysql2": "2.3.3",
     "ngrx-entity-relationship": "1.7.1",
-    "reflect-metadata": "0.1.13",
+    "reflect-metadata": "0.1.14",
     "rxjs": "7.5.5",
     "tslib": "2.4.0",
     "typeorm": "0.3.6",
