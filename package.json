@@ -111,7 +111,7 @@
     "karma-junit-reporter": "2.0.1",
     "lint-staged": "12.4.0",
     "ng-mocks": "13.5.0",
-    "npm": "8.8.0",
+    "npm": "9.9.3",
     "prettier": "2.6.2",
     "protractor": "7.0.0",
     "puppeteer": "13.7.0",
@@ -122,6 +122,6 @@
     "webpack-dev-server": "4.8.1"
   },
   "engines": {
-    "npm": "8.8.0"
+    "npm": "9.9.3"
   }
 }
