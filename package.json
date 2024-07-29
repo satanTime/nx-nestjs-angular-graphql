@@ -102,7 +102,7 @@
     "jasmine-spec-reporter": "7.0.0",
     "jest": "28.0.3",
     "jest-junit": "13.2.0",
-    "karma": "6.3.19",
+    "karma": "6.4.4",
     "karma-chrome-launcher": "3.1.1",
     "karma-coverage": "2.2.0",
     "karma-ie-launcher": "1.0.0",
