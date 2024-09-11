@@ -96,7 +96,7 @@
     "eslint-plugin-jsdoc": "39.2.7",
     "eslint-plugin-prefer-arrow": "1.2.3",
     "eslint-plugin-prettier": "4.0.0",
-    "husky": "7.0.4",
+    "husky": "9.1.6",
     "jasmine-core": "4.1.0",
     "jasmine-reporters": "2.5.0",
     "jasmine-spec-reporter": "7.0.0",
