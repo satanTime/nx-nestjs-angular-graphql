@@ -58,7 +58,7 @@
     "helmet": "5.0.2",
     "keycloak-angular": "9.1.0",
     "keycloak-js": "17.0.1",
-    "mysql2": "2.3.3",
+    "mysql2": "3.11.3",
     "ngrx-entity-relationship": "1.7.1",
     "reflect-metadata": "0.1.13",
     "rxjs": "7.5.5",
