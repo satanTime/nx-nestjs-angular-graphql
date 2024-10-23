@@ -86,7 +86,7 @@
     "@types/jasmine": "4.0.3",
     "@types/jasminewd2": "2.0.10",
     "@types/jest": "27.4.1",
-    "@types/node": "14.18.16",
+    "@types/node": "18.19.59",
     "@typescript-eslint/eslint-plugin": "5.20.0",
     "@typescript-eslint/parser": "5.20.0",
     "dotenv": "16.0.0",
